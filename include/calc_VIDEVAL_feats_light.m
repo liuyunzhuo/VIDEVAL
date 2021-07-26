@@ -64,6 +64,7 @@ function [VIDEVAL_all_features] = calc_VIDEVAL_feats_light(test_video, ...
             if ratio < 1
                 this_YUV_frame = imresize(this_YUV_frame, ratio);
                 next_YUV_frame = imresize(next_YUV_frame, ratio);
+                prev_YUV_frame = imresize(prev_YUV_frame, ratio);
             end
         else
             prev_YUV_frame = YUVread(test_file,[width height],i-1);
